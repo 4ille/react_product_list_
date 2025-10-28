@@ -1,0 +1,256 @@
+@import "../../components/variables/Variables.scss";
+
+.cartWrapper {
+  border-radius: 8px;
+  padding: 20px 20px 32px 20px;
+  background-color: $backgroundCart;
+  margin: 20px 0;
+  width: 80%;
+  min-height: 300px;
+
+  .alertNoItems {
+    width: 100%;
+    text-align: center;
+    color: $brown;
+    font-weight: 600;
+    font-size: 12px;
+  }
+
+  .buttonAlertWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 4px;
+
+    .alertCarbonNeutral {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $backgroundBody;
+      padding: 12px 20px;
+      width: 84%;
+      border-radius: 4px;
+      gap: 8px;
+      margin: 24px 12px 16px 12px;
+
+      .alertText {
+        font-size: 12px;
+      }
+
+      .carbonIcon {
+        width: 16px;
+
+        img {
+          height: auto;
+        }
+      }
+    }
+
+    .confirmBtn {
+      font-size: 16px;
+      color: white;
+      border: 1px solid $orange;
+      border-radius: 24px;
+      background-color: $orange;
+      padding: 12px 20px;
+      width: 84%;
+      height: 48px;
+      cursor: pointer;
+    }
+  }
+
+  .cakeIconWrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 36px 0 24px 0;
+
+    img {
+      width: 40%;
+      height: auto;
+    }
+  }
+
+  .cartItems {
+    .cartItem {
+      .product {
+        font-weight: 650;
+      }
+      .cartItemInfoWrapper {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid rgba(167, 167, 167, 0.063);
+        padding: 8px 0 20px 0;
+        margin-bottom: 28px;
+
+        .cartItemAmountPricesWrapper {
+          display: flex;
+          justify-content: space-between;
+          width: 50%;
+
+          .amount {
+            color: $orange;
+            font-weight: 700;
+          }
+
+          .productSinglePrice {
+            opacity: 0.7;
+          }
+        }
+
+        .removeIconWrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 2px solid rgba(167, 167, 167, 0.717);
+          border-radius: 20px;
+          height: 20px;
+          width: 20px;
+          cursor: pointer;
+
+          .removeIcon {
+            width: 12px;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+
+  .cartTitle {
+    color: $lightOrange;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .orderTotal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 16px;
+
+    .orderTotalSum {
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1399px) {
+  .cartWrapper {
+    max-width: 600px;
+    min-height: 300px;
+    padding: 20px;
+    border-radius: 8px;
+
+    .alertNoItems {
+      font-size: 16px;
+    }
+
+    .buttonAlertWrapper {
+      .alertCarbonNeutral {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $backgroundAlert;
+        padding: 12px;
+        border-radius: 4px;
+        gap: 4px;
+
+        .alertText {
+          font-size: 12px;
+        }
+
+        .carbonIcon {
+          width: 16px;
+          img {
+            height: auto;
+          }
+        }
+      }
+
+      .confirmBtn {
+        font-size: 16px;
+        color: white;
+        border: 1px solid $orange;
+        border-radius: 20px;
+        background-color: $orange;
+        padding: 12px 20px;
+      }
+    }
+
+    .cakeIconWrapper {
+      padding: 36px 0 16px 0;
+
+      img {
+        width: 40%;
+      }
+    }
+
+    .cartTitle {
+      font-size: 24px;
+    }
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .cartWrapper {
+    width: 380px;
+    min-height: 300px;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 44px 0 0 0;
+
+    .alertNoItems {
+      font-size: 16px;
+    }
+
+    .buttonAlertWrapper {
+      .alertCarbonNeutral {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $backgroundAlert;
+        padding: 12px;
+        border-radius: 4px;
+        gap: 4px;
+
+        .alertText {
+          font-size: 12px;
+        }
+
+        .carbonIcon {
+          width: 16px;
+
+          img {
+            height: auto;
+          }
+        }
+      }
+
+      .confirmBtn {
+        font-size: 16px;
+        color: white;
+        border: 1px solid $orange;
+        border-radius: 20px;
+        background-color: $orange;
+        padding: 12px 20px;
+      }
+    }
+
+    .cakeIconWrapper {
+      padding: 24px 0 8px 0;
+
+      img {
+        width: 50%;
+      }
+    }
+
+    .cartTitle {
+      font-size: 20px;
+    }
+  }
+}

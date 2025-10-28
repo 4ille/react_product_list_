@@ -1,0 +1,144 @@
+@import "../../components/variables/Variables.scss";
+
+.orderConfirmationWrapper {
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  position: fixed;
+  width: 100vw;
+  height: calc(100vh - 100px);
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  padding: 40px 32px 32px 32px;
+  background-color: $backgroundCart;
+  top: 100px;
+  left: 0;
+
+  .confirmedTitle {
+    font-size: 40px;
+    font-weight: 800;
+    margin: 20px 0;
+    width: 40%;
+  }
+
+  .comment {
+    font-size: 16px;
+    opacity: 0.5;
+    margin-bottom: 28px;
+  }
+
+  .iconOrderConfirmed {
+    width: 48px;
+    height: auto;
+  }
+
+  .newOrderBtn {
+    font-size: 20px;
+    color: white;
+    border: 1px solid $orange;
+    border-radius: 32px;
+    background-color: $orange;
+    padding: 12px 20px;
+    width: 100%;
+    height: 64px;
+    margin-top: 32px;
+    cursor: pointer;
+  }
+
+  .orderedProducts {
+    border: 1px solid $backgroundBody;
+    border-radius: 8px;
+    min-height: 120px;
+    background-color: $backgroundBody;
+    padding: 16px 24px;
+    flex-grow: 1;
+    overflow-y: auto;
+
+    .orderedItem {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid rgba(128, 128, 128, 0.129);
+      padding: 16px 0;
+
+      .thumbnailInfoWrapper {
+        display: flex;
+        gap: 16px;
+
+        .itemInfoWrapper {
+          display: flex;
+          flex-direction: column;
+          font-weight: 700;
+          gap: 16px;
+
+          .amountSinglePriceWrapper {
+            display: flex;
+            gap: 16px;
+
+            .amount {
+              color: $orange;
+              font-weight: 700;
+            }
+
+            .singlePrice {
+              opacity: 0.6;
+              font-weight: 450;
+            }
+          }
+        }
+        .thumbnail {
+          width: 64px;
+          height: auto;
+          border-radius: 8px;
+        }
+      }
+
+      .totalPrice {
+        font-weight: 600;
+      }
+    }
+
+    .totalOrderWrapper {
+      display: flex;
+      justify-content: space-between;
+      margin: 40px 0 8px 0;
+
+      .totalAmount {
+        font-weight: 700;
+        font-size: 28px;
+      }
+
+      .totalOrder {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1399px) {
+  .orderConfirmationWrapper {
+    top: 100px;
+    left: 220px;
+    max-width: 55%;
+    max-height: 80vh;
+    border-radius: 8px;
+
+    .confirmedTitle {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .orderConfirmationWrapper {
+    top: 100px;
+    left: 460px;
+    width: 40%;
+    max-height: 80vh;
+    border-radius: 8px;
+
+    .confirmedTitle {
+      width: 100%;
+    }
+  }
+}
